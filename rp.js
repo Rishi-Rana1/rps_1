@@ -47,8 +47,19 @@ function playRound (ComputerChoice, PlayerChoice) {
     }
 };
 
+function fix(player1) {
+    let first = player1[0]
+    first = first.toUpperCase()
+    let next = player1.slice(1)
+    next = next.toLowerCase()
+    return first + next
+};
+
 function game() {
     for (let x = 0; x < 5; x++) {
         let player = prompt("Pick Rock, Paper, or Scissors")
+        player = fix(player)
+        let comp = getComputerChoice()
+        console.log(playRound(comp, player))
     }
 }
