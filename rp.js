@@ -63,3 +63,5 @@ function game() {
         console.log(playRound(comp, player))
     }
 }
+
+game()
