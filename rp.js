@@ -2,16 +2,18 @@ function getComputerChoice() {
     let chance = Math.random() * 100;
     if (chance <= 33) {
         let choice = "Rock"
+        return choice
     }
 
     else if (chance >= 33 && chance <= 66) {
         let choice = "Paper"
+        return choice
     }
 
     else {
         let choice = "Scissors"
+        return choice
     }
-    return choice
 };
 
 function playRound (ComputerChoice, PlayerChoice) {
