@@ -1,0 +1,29 @@
+.title {
+    display: flex;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.Content {
+    display: flex;
+    flex-direction: column;
+    background-color: lightblue;
+    border: 5px solid Black;
+}
+
+.lad {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -10px;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    width: 300px
+}
