@@ -139,7 +139,19 @@ rock.addEventListener('click', () => {
         button.textContent = "start"
         button.style.cssText = 'background-color: orange; align-self: center; border-radius: 8px;'
         result.appendChild(button)
-        button.addEventListener('click', game())
+        button.addEventListener('click', () => {
+            console.log(document.querySelectorAll("#end").length)
+            if (document.querySelectorAll("#end").length != 0) {
+                console.log(document.querySelectorAll("#end"))
+                document.querySelector("#end").remove();
+                document.querySelector("#end").remove();
+            }
+            if (document.getElementById('message')) {
+                document.getElementById('message').remove()
+            }
+            console.log("jo")
+            game()
+        })
     }
     else if (document.querySelector('.paper1') !== null || document.querySelector('.scissors1') !== null) {
         document.getElementById("choice").remove();
@@ -163,7 +175,19 @@ rock.addEventListener('click', () => {
         button.textContent = "start"
         button.style.cssText = 'background-color: orange; align-self: center; border-radius: 8px;'
         result.appendChild(button)
-        button.addEventListener('click', game())
+        button.addEventListener('click', () => {
+            console.log(document.querySelectorAll("#end").length)
+            if (document.querySelectorAll("#end").length != 0) {
+                console.log(document.querySelectorAll("#end"))
+                document.querySelector("#end").remove();
+                document.querySelector("#end").remove();
+            }
+            if (document.getElementById('message')) {
+                document.getElementById('message').remove()
+            }
+            console.log("jo")
+            game()
+        })
     }
     else {
         document.getElementById("choice").remove();
@@ -194,7 +218,19 @@ paper.addEventListener('click', () => {
         button.textContent = "start"
         button.style.cssText = 'background-color: orange; align-self: center; border-radius: 8px;'
         result.appendChild(button)
-        button.addEventListener('click', game())
+        button.addEventListener('click', () => {
+            console.log(document.querySelectorAll("#end").length)
+            if (document.querySelectorAll("#end").length != 0) {
+                console.log(document.querySelectorAll("#end"))
+                document.querySelector("#end").remove();
+                document.querySelector("#end").remove();
+            }
+            if (document.getElementById('message')) {
+                document.getElementById('message').remove()
+            }
+            console.log("jo")
+            game()
+        })
     }
     else if (document.querySelector('.rock1') !== null || document.querySelector('.scissors1') !== null) {
         document.getElementById("choice").remove();
@@ -218,7 +254,19 @@ paper.addEventListener('click', () => {
         button.textContent = "start"
         button.style.cssText = 'background-color: orange; align-self: center; border-radius: 8px;'
         result.appendChild(button)
-        button.addEventListener('click', game())
+        button.addEventListener('click', () => {
+            console.log(document.querySelectorAll("#end").length)
+            if (document.querySelectorAll("#end").length != 0) {
+                console.log(document.querySelectorAll("#end"))
+                document.querySelector("#end").remove();
+                document.querySelector("#end").remove();
+            }
+            if (document.getElementById('message')) {
+                document.getElementById('message').remove()
+            }
+            console.log("jo")
+            game()
+        })
     }
     else {
         document.getElementById("choice").remove();
@@ -250,7 +298,19 @@ scissors.addEventListener('click', () => {
         button.textContent = "start"
         button.style.cssText = 'background-color: orange; align-self: center; border-radius: 8px;'
         result.appendChild(button)
-        button.addEventListener('click', game())
+        button.addEventListener('click', () => {
+            console.log(document.querySelectorAll("#end").length)
+            if (document.querySelectorAll("#end").length != 0) {
+                console.log(document.querySelectorAll("#end"))
+                document.querySelector("#end").remove();
+                document.querySelector("#end").remove();
+            }
+            if (document.getElementById('message')) {
+                document.getElementById('message').remove()
+            }
+            console.log("jo")
+            game()
+        })
     }
     else if (document.querySelector('.rock1') !== null || document.querySelector('.paper1') !== null) {
         document.getElementById("choice").remove();
@@ -274,7 +334,19 @@ scissors.addEventListener('click', () => {
         button.textContent = "start"
         button.style.cssText = 'background-color: orange; align-self: center; border-radius: 8px;'
         result.appendChild(button)
-        button.addEventListener('click', game())
+        button.addEventListener('click', () => {
+            console.log(document.querySelectorAll("#end").length)
+            if (document.querySelectorAll("#end").length != 0) {
+                console.log(document.querySelectorAll("#end"))
+                document.querySelector("#end").remove();
+                document.querySelector("#end").remove();
+            }
+            if (document.getElementById('message')) {
+                document.getElementById('message').remove()
+            }
+            console.log("jo")
+            game()
+        })
     }
     else {
         document.getElementById("choice").remove();
@@ -289,5 +361,3 @@ scissors.addEventListener('click', () => {
         }
     }
 })
-
-//game()
