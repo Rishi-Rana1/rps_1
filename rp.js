@@ -17,31 +17,51 @@ function getComputerChoice() {
 };
 
 function playRound (ComputerChoice, PlayerChoice) {
+    let players = document.querySelector('.pScore')
+    let computers = document.querySelector('.cScore')
     if (ComputerChoice === "Rock" && PlayerChoice === "Paper") {
+        let playern = (Number(players.textContent) + 1)
+        playern = playern.toString()
+        players.textContent = playern
         return "You Win, Paper beats Rock!"
     }
 
     else if (ComputerChoice === "Paper" && PlayerChoice === "Rock") {
+        let compn = (Number(computers.textContent) + 1)
+        compn = compn.toString()
+        computers.textContent = compn
         return "You Lose, Paper beats Rock!"
 }
     else if (ComputerChoice === "Rock" && PlayerChoice === "Rock") {
         return "Tie"
     }
     else if (ComputerChoice === "Paper" && PlayerChoice === "Scissors") {
+        let playern = (Number(players.textContent) + 1)
+        playern = playern.toString()
+        players.textContent = playern
         return "You Win, Scissors beats Paper!"
     }
 
     else if (ComputerChoice === "Scissors" && PlayerChoice === "Paper") {
+        let compn = (Number(computers.textContent) + 1)
+        compn = compn.toString()
+        computers.textContent = compn
         return "You Lose, Scissors beats Paper!"
 }
     else if (ComputerChoice === "Scissors" && PlayerChoice === "Scissors") {
         return "Tie"
     }
     else if (ComputerChoice === "Scissors" && PlayerChoice === "Rock") {
+        let playern = (Number(players.textContent) + 1)
+        playern = playern.toString()
+        players.textContent = playern
         return "You Win, Rock beats Scissors!"
     }
 
     else if (ComputerChoice === "Rock" && PlayerChoice === "Scissors") {
+        let compn = (Number(computers.textContent) + 1)
+        compn = compn.toString()
+        computers.textContent = compn
         return "You Lose, Rock beats Scissors!"
 }
     else if (ComputerChoice === "Paper" && PlayerChoice === "Paper") {
@@ -81,6 +101,26 @@ function game() {
     end1.style.cssText = 'list-style: none;'
     document.querySelector('.computer').appendChild(end1)
     document.querySelector('.result').appendChild(end)
+    let playersc = document.querySelector('.pScore')
+    let compsc = document.querySelector('.cScore')
+    if (playersc.textContent === "5") {
+        let result = document.querySelector(".result"), newNode = document.createElement('li')
+        newNode.textContent = "You Win the Game! " + playersc.textContent + " to " + compsc.textContent
+        newNode.setAttribute('id', 'message')
+        newNode.style.cssText = "list-style: none;"
+        result.append(newNode)
+        playersc.textContent = 0
+        compsc.textContent = 0
+    }
+    else if (compsc.textContent === "5") {
+        let result = document.querySelector(".result"), newNode = document.createElement('li')
+        newNode.setAttribute('id', 'message')
+        newNode.textContent = "You Lose the Game! " + playersc.textContent + " to " + compsc.textContent
+        newNode.style.cssText = "list-style: none;"
+        result.append(newNode)
+        compsc.textContent = 0
+        playersc.textContent = 0
+    }
     }
 
 const rock = document.querySelector('.rock');
@@ -107,6 +147,10 @@ rock.addEventListener('click', () => {
         if (document.getElementById('end')) {
             document.getElementById('end').remove()
             document.getElementById('end').remove()
+        if (document.getElementById('message')) {
+            document.getElementById('message').remove()
+            document.getElementById('message').remove()
+        }
         }
         const choice = document.createElement('li')
         choice.setAttribute('id', 'choice')
@@ -128,8 +172,11 @@ rock.addEventListener('click', () => {
             document.getElementById('end').remove()
             document.getElementById('end').remove()
         }
-    }
-})
+        if (document.getElementById('message')) {
+            document.getElementById('message').remove()
+            document.getElementById('message').remove()
+        }
+    }})
 
 const paper = document.querySelector('.paper');
 paper.addEventListener('click', () => {
@@ -156,6 +203,10 @@ paper.addEventListener('click', () => {
             document.getElementById('end').remove()
             document.getElementById('end').remove()
         }
+        if (document.getElementById('message')) {
+            document.getElementById('message').remove()
+            document.getElementById('message').remove()
+        }
         const choice = document.createElement('li')
         choice.setAttribute('id', 'choice')
         choice.classList.add('paper1')
@@ -175,6 +226,10 @@ paper.addEventListener('click', () => {
         if (document.getElementById('end')) {
             document.getElementById('end').remove()
             document.getElementById('end').remove()
+        }
+        if (document.getElementById('message')) {
+            document.getElementById('message').remove()
+            document.getElementById('message').remove()
         }
     }
 })
@@ -204,6 +259,10 @@ scissors.addEventListener('click', () => {
             document.getElementById('end').remove()
             document.getElementById('end').remove()
         }
+        if (document.getElementById('message')) {
+            document.getElementById('message').remove()
+            document.getElementById('message').remove()
+        }
         const choice = document.createElement('li')
         choice.setAttribute('id', 'choice')
         choice.classList.add('scissors1')
@@ -223,6 +282,10 @@ scissors.addEventListener('click', () => {
         if (document.getElementById('end')) {
             document.getElementById('end').remove()
             document.getElementById('end').remove()
+        }
+        if (document.getElementById('message')) {
+            document.getElementById('message').remove()
+            document.getElementById('message').remove()
         }
     }
 })
